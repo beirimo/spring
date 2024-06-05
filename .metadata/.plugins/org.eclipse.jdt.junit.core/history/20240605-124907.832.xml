@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MysqlTest (1)" project="ex01" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.example.MysqlTest" time="0.811" displayname="MysqlTest" uniqueid="[engine:junit-jupiter]/[class:com.example.MysqlTest]">
+    <testcase name="now" classname="com.example.MysqlTest" time="0.811" displayname="now()" uniqueid="[engine:junit-jupiter]/[class:com.example.MysqlTest]/[method:now()]">
+      <error>org.mybatis.spring.MyBatisSystemException&#13;
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)&#13;
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy61.selectOne(Unknown Source)&#13;
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:152)&#13;
+	at com.example.dao.MysqlDAOImpl.now(MysqlDAOImpl.java:15)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)&#13;
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)&#13;
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)&#13;
+	at com.example.dao.MysqlDAOImpl$$SpringCGLIB$$0.now(&lt;generated&gt;)&#13;
+	at com.example.MysqlTest.now(MysqlTest.java:15)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.example.mapper.MySqlMapper.now&#13;
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.example.mapper.MySqlMapper.now&#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:70)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)&#13;
+	... 20 more&#13;
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.example.mapper.MySqlMapper.now&#13;
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:1062)&#13;
+	at org.apache.ibatis.session.Configuration.getMappedStatement(Configuration.java:852)&#13;
+	at org.apache.ibatis.session.Configuration.getMappedStatement(Configuration.java:845)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)&#13;
+	... 29 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

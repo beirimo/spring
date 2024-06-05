@@ -1,0 +1,17 @@
+package com.example;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class MysqlTest {
+	@Autowired
+	MySqlDAO dao;
+	
+	@Test
+	public void now() {
+		System.out.println("현재날짜시간" + dao.now());
+	}
+
+}

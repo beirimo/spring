@@ -1,0 +1,21 @@
+package com.example.controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/users") 
+
+//이렇게 하면 매번 유저스를 생략해도 됨
+public class UsersController {
+   //사용자 등록화면이동
+   @GetMapping("/insert")
+   public String insert() {
+      return "/users/insert.html";
+      
+   }
+   
+   
+   //사용자등록
+   @PostMapping("/insert")
+}

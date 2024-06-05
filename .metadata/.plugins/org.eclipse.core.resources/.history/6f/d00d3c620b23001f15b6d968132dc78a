@@ -1,0 +1,18 @@
+package com.example.dao;
+
+import java.util.HashMap;
+import java.util.List;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserDAOImpl implements UserDAO {
+
+	@Override
+	public List<HashMap<String, Object>> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	
+}

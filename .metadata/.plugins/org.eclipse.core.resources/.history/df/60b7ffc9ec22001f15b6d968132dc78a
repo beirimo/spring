@@ -1,0 +1,15 @@
+package com.example;
+
+
+
+@SpringBooteTest
+public class MysqlTest {
+	@Autowired
+	MySqlDAO dao;
+	
+	@Test
+	public void now() {
+		System.out.println("현재날짜시간" + dao.now());
+	}
+
+}
